@@ -1,0 +1,11 @@
+.next
+.sites-runtime
+dist
+outputs
+work
+examples
+db
+worker
+build
+.openai
+.env*
