@@ -24,10 +24,10 @@ npm run dev
 - Vercel: configurada pelo arquivo `vercel.json`, usando `next build`.
 - Sites: o comando `npm run build` mantém o fluxo Vinext/Cloudflare da hospedagem original.
 
-## Informações da loja
+## Configuração da loja
 
 - Instagram: [@lojamaisonlaiza](https://www.instagram.com/lojamaisonlaiza/)
-- WhatsApp: +55 87 8102-6402
-- Localização: Avenida São Francisco, ao lado do 777 Sushi, Areia Branca.
+- WhatsApp e localização são configurados pelas variáveis listadas em `.env.example`.
+- Na Vercel, cadastre essas variáveis em **Project Settings → Environment Variables**.
 
 © Maison Laiza — Todos os direitos reservados.
