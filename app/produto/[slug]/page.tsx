@@ -11,7 +11,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const product = products.find((item) => item.slug === slug) ?? products[0];
   const message = encodeURIComponent(`Olá, Maison Laiza! Gostaria de saber mais sobre ${product.name}, cor ${product.tone}. Podem confirmar valor, tamanhos e disponibilidade?`);
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "558781026402";
   const whatsappUrl = whatsappNumber
     ? `https://wa.me/${whatsappNumber}?text=${message}`
     : "https://www.instagram.com/lojamaisonlaiza/";

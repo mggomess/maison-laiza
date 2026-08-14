@@ -23,9 +23,11 @@ export const metadata: Metadata = {
   },
 };
 
-const phone = process.env.NEXT_PUBLIC_PHONE_DISPLAY;
-const storeAddress = process.env.NEXT_PUBLIC_STORE_ADDRESS;
-const storeCity = process.env.NEXT_PUBLIC_STORE_CITY;
+const phone = process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+55 87 8102-6402";
+const storeAddress =
+  process.env.NEXT_PUBLIC_STORE_ADDRESS ||
+  "Avenida São Francisco, ao lado do 777 Sushi";
+const storeCity = process.env.NEXT_PUBLIC_STORE_CITY || "Areia Branca";
 
 const storeSchema = {
   "@context": "https://schema.org",
@@ -33,7 +35,7 @@ const storeSchema = {
   name: "Maison Laiza",
   description: "Moda feminina, loja física e atendimento online.",
   ...(phone ? { telephone: phone } : {}),
-  url: "https://maison-laiza.ericabarretocs.chatgpt.site",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://maison-laiza.vercel.app",
   sameAs: ["https://www.instagram.com/lojamaisonlaiza/"],
   ...(storeAddress
     ? {

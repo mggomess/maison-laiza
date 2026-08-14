@@ -6,16 +6,18 @@ import { categories, products, type Product } from "./data";
 const announcements = [
   "NOVIDADES TODA SEMANA",
   "COMPRE ONLINE",
-  `WHATSAPP · ${process.env.NEXT_PUBLIC_PHONE_DISPLAY || "ATENDIMENTO ONLINE"}`,
+  `WHATSAPP · ${process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+55 87 8102-6402"}`,
   "MAISON LAIZA — MODA FEMININA",
 ];
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
-const PHONE_DISPLAY = process.env.NEXT_PUBLIC_PHONE_DISPLAY || "ATENDIMENTO ONLINE";
-const STORE_CITY = process.env.NEXT_PUBLIC_STORE_CITY || "Consulte no Instagram";
-const STORE_ADDRESS = process.env.NEXT_PUBLIC_STORE_ADDRESS || "Endereço disponível no Instagram";
-const STORE_REFERENCE = process.env.NEXT_PUBLIC_STORE_REFERENCE || "";
-const MAPS_QUERY = process.env.NEXT_PUBLIC_MAPS_QUERY || "Maison Laiza";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "558781026402";
+const PHONE_DISPLAY = process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+55 87 8102-6402";
+const STORE_CITY = process.env.NEXT_PUBLIC_STORE_CITY || "Areia Branca";
+const STORE_ADDRESS = process.env.NEXT_PUBLIC_STORE_ADDRESS || "Avenida São Francisco";
+const STORE_REFERENCE = process.env.NEXT_PUBLIC_STORE_REFERENCE || "Ao lado do 777 Sushi";
+const MAPS_QUERY =
+  process.env.NEXT_PUBLIC_MAPS_QUERY ||
+  "Maison Laiza Avenida São Francisco ao lado do 777 Sushi Areia Branca";
 const whatsappLink = (message: string) =>
   WHATSAPP_NUMBER
     ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
